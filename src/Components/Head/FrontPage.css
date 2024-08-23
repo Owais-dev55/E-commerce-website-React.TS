@@ -1,0 +1,79 @@
+.container-xl {
+  max-width: 1400px;
+  margin: 2.5rem;
+  padding: 2rem;
+  background-image: url("https://cdn.midjourney.com/898f3c5a-06ee-4780-83a4-56601992733c/0_3.png");
+  background-size: cover;
+  
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.headline {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+}
+
+.Pagetext {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.shop-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #ff3f31;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.fashion-img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title span {
+  color: #ff69b4;
+}
+
+.nav-link {
+  margin-left: 45px;
+}
+
+.d-flex {
+  margin-right: 3rem;
+}
+
+.form-control {
+  width: 13rem;
+}

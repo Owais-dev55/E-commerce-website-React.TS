@@ -1,0 +1,163 @@
+/* Container styling */
+.container {
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+/* Title styling */
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Card list styling */
+.row {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: space-between; /* Distribute space between cards */
+  gap: 1.5rem;
+  overflow: hidden; /* Prevent horizontal scroll */
+}
+
+/* Individual card styling */
+.card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(
+    100% / 4 - 1.5rem
+  ); /* Adjust width to fit 4 cards in a row, accounting for gaps */
+  max-width: 18rem;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 3px solid #007bff;
+}
+
+/* Card body styling */
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Card footer (featured, price) */
+.card-header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.list-group-item {
+  background-color: #f7f7f7;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Button styling */
+/* Button styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  width: 100%; /* Make button width responsive */
+  max-width: 200px; /* Max width to prevent excessive stretching */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-primary {
+    font-size: 0.9rem; /* Adjust font size on smaller screens */
+    padding: 0.5rem 1rem; /* Adjust padding */
+  }
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center cards */
+  }
+
+  .card {
+    width: 90%;
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+div {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
