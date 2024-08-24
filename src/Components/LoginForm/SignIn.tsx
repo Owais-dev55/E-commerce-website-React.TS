@@ -3,8 +3,6 @@ import "./SignIn.css";
 import { Link } from "react-router-dom";
 
 type Inputs = {
-  children: React.ReactNode;
-
   fullName: string;
   password: string;
 };
@@ -20,6 +18,7 @@ const SignIn = () => {
   return (
     <>
       <div className="container-fuild">
+        {/* <img src={ImageBackground} alt="" />                          */}
         <div className="wrapper">
           <h1 className="heading"> WelCome to Vogue Aura</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
