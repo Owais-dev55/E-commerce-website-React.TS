@@ -1,4 +1,9 @@
 import  { useState, useEffect } from "react";
+import Image01 from '../../images/DisplayImage01.png';
+import Image02 from '../../images/DisplayImage02.png';
+import Image03 from '../../images/DisplayImage03.png';
+import Image04 from '../../images/johan_343_vogue_photoshoot_of_beautiful_blonde_long_curl_haired_d153ef32-7f9f-42ce-9a4f-59b4d68be101.png'
+import Image06 from '../../images/DisplayImage06.png';
 import "./Display.css";
 
 const Slider = () => {
@@ -6,13 +11,13 @@ const Slider = () => {
   const [slides, ] = useState([
     {
       image:
-        "src/images/johan_343_vogue_photoshoot_of_beautiful_blonde_long_curl_haired_d153ef32-7f9f-42ce-9a4f-59b4d68be101.png",
+        Image02,
       title: "Slide 1",
     },
-    { image: "src/images/DisplayImage01.png", title: "Slide 2" },
-    { image: "src/images/DisplayImage02.png", title: "Slide 3" },
-    { image: "src/images/DisplayImage03.png", title: "Slide 4" },
-    { image: "src/images/DisplayImage06.png", title: "Slide 5" },
+    { image: Image01, title: "Slide 2" },
+    { image: Image03, title: "Slide 3" },
+    { image: Image04, title: "Slide 4" },
+    { image: Image06, title: "Slide 5" },
   ]);
 
   useEffect(() => {
