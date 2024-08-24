@@ -1,8 +1,8 @@
 import { Card } from "../../Card";
-import popular01 from "../../../../images/popular01.jpg";
-import popular02 from "../../../../images/popular02.jpg";
-import popular03 from "../../../../images/popular04.jpg";
-import popular04 from "../../../../images/popular05.jpg";
+import popular01 from "../../../../images/popular01.webp";
+import popular02 from "../../../../images/popular02.webp";
+import popular03 from "../../../../images/popular04.webp";
+import popular04 from "../../../../images/popular05.webp";
 
 const AllWomenPopular = () => {
   const products = [

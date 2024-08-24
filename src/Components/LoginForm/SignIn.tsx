@@ -18,7 +18,6 @@ const SignIn = () => {
   return (
     <>
       <div className="container-fuild">
-        {/* <img src={ImageBackground} alt="" />                          */}
         <div className="wrapper">
           <h1 className="heading"> WelCome to Vogue Aura</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
