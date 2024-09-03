@@ -1,4 +1,3 @@
-
 import "./MenPage.css";
 
 const MenPage = () => {
@@ -13,9 +12,9 @@ const MenPage = () => {
             <h1 className="Find">
               Uncover the latest <b>VOGUEAURA</b> insights
             </h1>
-            <a href='/Men' className="btn btn-lg btn-outline-success ">
+            <a href="/Men" className="btn btn-lg btn-outline-success ">
               Find For Him
-            </a >
+            </a>
           </div>
           <div className="col-md-8">
             <div className="collage-grid">

@@ -1,10 +1,8 @@
-/* Container styling */
 .container {
   margin-top: 2rem;
   padding: 0 2rem;
 }
 
-/* Title styling */
 .heading {
   text-align: center;
   font-size: 2.5rem;
@@ -26,16 +24,13 @@
   border-radius: 2px;
 }
 
-/* Card list styling */
 .row {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  justify-content: space-between; /* Distribute space between cards */
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 1.5rem;
-  overflow: hidden; /* Prevent horizontal scroll */
 }
 
-/* Individual card styling */
 .card {
   background: linear-gradient(145deg, #ffffff, #f0f0f0);
   border: none;
@@ -43,13 +38,23 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: calc(
-    100% / 4 - 1.5rem
-  ); /* Adjust width to fit 4 cards in a row, accounting for gaps */
-  max-width: 18rem;
+  width: 18rem;
   position: relative;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 
+@keyframes appear {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -62,7 +67,6 @@
   border-bottom: 3px solid #007bff;
 }
 
-/* Card body styling */
 .card-body {
   padding: 1.5rem;
   text-align: center;
@@ -84,7 +88,6 @@
   line-height: 1.6;
 }
 
-/* Card footer (featured, price) */
 .card-header {
   background-color: #f7f7f7;
   border-bottom: 1px solid #ddd;
@@ -100,8 +103,6 @@
   font-size: 1rem;
 }
 
-/* Button styling */
-/* Button styling */
 .btn-primary {
   background-color: #007bff;
   border: none;
@@ -113,8 +114,8 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
   display: inline-block;
   text-align: center;
-  width: 100%; /* Make button width responsive */
-  max-width: 200px; /* Max width to prevent excessive stretching */
+  width: 100%;
+  max-width: 200px;
 }
 
 .btn-primary:hover {
@@ -122,11 +123,10 @@
   transform: translateY(-3px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .btn-primary {
-    font-size: 0.9rem; /* Adjust font size on smaller screens */
-    padding: 0.5rem 1rem; /* Adjust padding */
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -136,8 +136,8 @@
 
 @media (max-width: 768px) {
   .row {
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: center; /* Center cards */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .card {
@@ -145,19 +145,4 @@
     max-width: 90%;
     margin-bottom: 1.5rem;
   }
-}
-
-@keyframes appear {
-  from {
-    transform: translateX(-100px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-div {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0;
 }

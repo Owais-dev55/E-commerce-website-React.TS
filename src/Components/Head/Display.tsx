@@ -1,17 +1,16 @@
-import  { useState, useEffect } from "react";
-import Image01 from '../../images/DisplayImage01.webp';
-import Image02 from '../../images/DisplayImage02.webp';
-import Image03 from '../../images/DisplayImage03.webp';
-import Image04 from '../../images/johan_343_vogue_photoshoot_of_beautiful_blonde_long_curl_haired_d153ef32-7f9f-42ce-9a4f-59b4d68be101.webp'
-import Image06 from '../../images/DisplayImage06.webp';
+import { useState, useEffect } from "react";
+import Image01 from "../../images/DisplayImage01.webp";
+import Image02 from "../../images/DisplayImage02.webp";
+import Image03 from "../../images/DisplayImage03.webp";
+import Image04 from "../../images/johan_343_vogue_photoshoot_of_beautiful_blonde_long_curl_haired_d153ef32-7f9f-42ce-9a4f-59b4d68be101.webp";
+import Image06 from "../../images/DisplayImage06.webp";
 import "./Display.css";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [slides, ] = useState([
+  const [slides] = useState([
     {
-      image:
-        Image02,
+      image: Image02,
       title: "Slide 1",
     },
     { image: Image01, title: "Slide 2" },
@@ -34,7 +33,6 @@ const Slider = () => {
   const handlePreviousSlide = () => {
     setCurrentSlide((currentSlide - 1 + slides.length) % slides.length);
   };
-
 
   return (
     <div className="slider container-fuild">

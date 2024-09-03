@@ -1,10 +1,10 @@
 import { Card } from "../../Card";
-import Menurban04 from '../../../../images/menurban04.jpg'
-import Menurban02 from '../../../../images/menurban02.webp'
-import Menurban03 from '../../../../images/menurban03.webp'
-import Menurban01 from '../../../../images/menurban01.webp'
-import Menurban05 from '../../../../images/menurban05.webp'
-import Menurban06 from '../../../../images/menurban06.webp'
+import Menurban04 from "../../../../images/menurban04.jpg";
+import Menurban02 from "../../../../images/menurban02.webp";
+import Menurban03 from "../../../../images/menurban03.webp";
+import Menurban01 from "../../../../images/menurban01.webp";
+import Menurban05 from "../../../../images/menurban05.webp";
+import Menurban06 from "../../../../images/menurban06.webp";
 
 const MenUrbanAll = () => {
   const products = [

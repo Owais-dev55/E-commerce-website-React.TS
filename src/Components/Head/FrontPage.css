@@ -1,47 +1,42 @@
 .container-xl {
-  max-width: 1400px;
-  margin: 2.5rem;
+  max-width: 100%;
+  margin: 2.5rem auto;
   padding: 2rem;
+  min-height: 60vh;
   background-image: url("https://cdn.midjourney.com/898f3c5a-06ee-4780-83a4-56601992733c/0_3.webp");
   background-size: cover;
-  
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-}
-
-.row {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.container:hover {
-  transform: scale(1.05);
+  align-content: center;
 }
 
 .text {
   color: #ffffff;
-  font-size: 26px;
-  line-height: 3rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.headline {
-  font-size: 3rem;
+.title {
+  font-size: 2rem;
   font-family: "Playfair Display", serif;
 }
 
+.title span {
+  color: #ff69b4;
+}
+
 .Pagetext {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
 .shop-btn {
   margin-top: 1.5rem;
   padding: 0.75rem 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   background-color: #ff6f61;
   border: none;
   border-radius: 50px;
@@ -52,28 +47,47 @@
   background-color: #ff3f31;
 }
 
-.img-container {
-  text-align: center;
+@media (max-width: 768px) {
+  .text {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .Pagetext {
+    font-size: 0.875rem;
+  }
+
+  .shop-btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .container-xl {
+    min-height: 50vh;
+  }
 }
 
-.fashion-img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+@media (max-width: 576px) {
+  .container-xl {
+    padding: 1rem;
+    min-height: 40vh;
+  }
 
-.title span {
-  color: #ff69b4;
-}
+  .title {
+    font-size: 1.5rem;
+  }
 
-.nav-link {
-  margin-left: 45px;
-}
+  .Pagetext {
+    font-size: 0.75rem;
+  }
 
-.d-flex {
-  margin-right: 3rem;
-}
-
-.form-control {
-  width: 13rem;
+  .shop-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
 }

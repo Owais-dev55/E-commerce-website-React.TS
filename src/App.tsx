@@ -6,8 +6,6 @@
 // import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // import Navbar from './Components/Head/Navbar'
 
-
-
 // function App() {
 
 //   const router = createBrowserRouter([
@@ -25,7 +23,7 @@
 //     <Body/>
 
 //     <Footer />
-    
+
 //     </>
 //   )
 // }
@@ -44,8 +42,6 @@ import SignIn from "./Components/LoginForm/SignIn";
 import SignUp from "./Components/LoginForm/SignUp";
 
 function App() {
-
-  
   return (
     <Router>
       <Navbar />
@@ -57,11 +53,8 @@ function App() {
         <Route path="/women" element={<Women />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignUp" element={<SignUp />} />
-        
       </Routes>
     </Router>
-    
-    
   );
 }
 

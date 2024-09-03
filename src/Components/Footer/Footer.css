@@ -9,18 +9,21 @@
 .container-footer {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 .col-md-4 {
-  flex: 1;
-  max-width: 33.33%;
+  flex: 1 1 30%;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .logo h2 {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   margin-bottom: 15px;
-  -spacing: 1px;
 }
 
 .logo p {
@@ -89,4 +92,50 @@
 
 .contact button:active {
   transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 1 1 45%;
+    max-width: 100%;
+  }
+
+  .social a {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .logo h2 {
+    font-size: 2rem;
+  }
+
+  .contact input[type="text"],
+  .contact input[type="email"] {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .col-md-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .logo h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact input[type="text"],
+  .contact input[type="email"] {
+    padding: 12px;
+  }
+
+  .contact button {
+    padding: 10px;
+    font-size: 0.875rem;
+  }
 }

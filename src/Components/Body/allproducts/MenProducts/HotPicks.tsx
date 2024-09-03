@@ -1,10 +1,9 @@
-
 import { Card } from "../../Card";
 import "./MenUrban.css";
-import HotPick01 from '../../../../images/hotpicks01.webp'
-import HotPick02 from '../../../../images/hotpicks02.webp'
-import HotPick03 from '../../../../images/hotpicks03.webp'
-import HotPick04 from '../../../../images/hotpicks04.webp'
+import HotPick01 from "../../../../images/hotpicks01.webp";
+import HotPick02 from "../../../../images/hotpicks02.webp";
+import HotPick03 from "../../../../images/hotpicks03.webp";
+import HotPick04 from "../../../../images/hotpicks04.webp";
 const AllWomenPopular = () => {
   const products = [
     {

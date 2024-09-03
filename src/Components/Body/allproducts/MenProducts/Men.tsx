@@ -1,15 +1,14 @@
-
-import MenPage from './MenPage'
-import MenUrbanAll from './MenUrbanAll'
-import HotPicks from './HotPicks'
+import MenPage from "./MenPage";
+import MenUrbanAll from "./MenUrbanAll";
+import HotPicks from "./HotPicks";
 const Men = () => {
   return (
     <div>
-        <MenPage />
-        <MenUrbanAll />
-        <HotPicks />
+      <MenPage />
+      <MenUrbanAll />
+      <HotPicks />
     </div>
-  )
-}
+  );
+};
 
-export default Men
+export default Men;

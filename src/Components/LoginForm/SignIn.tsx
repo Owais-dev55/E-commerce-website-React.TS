@@ -17,7 +17,7 @@ const SignIn = () => {
 
   return (
     <>
-      <div className="container-fuild">
+      <div className="container-fuild signin">
         <div className="wrapper">
           <h1 className="heading"> WelCome to Vogue Aura</h1>
           <form onSubmit={handleSubmit(onSubmit)}>

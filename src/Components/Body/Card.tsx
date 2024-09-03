@@ -17,7 +17,7 @@ export const Card = ({
   return (
     <>
       <div className="popular-in-women">
-        <div className="card" style={{ width: "20rem" }}>
+        <div className="card">
           <img src={url} className="card-img-top" alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>

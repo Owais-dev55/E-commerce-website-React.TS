@@ -1,8 +1,7 @@
-
 import { Card } from "../../Card";
-import New01 from '../../../../images/womenArraival01.webp'
-import New02 from '../../../../images/womenArraival02.webp'
-import New03 from '../../../../images/womenArraival03.webp'
+import New01 from "../../../../images/womenArraival01.webp";
+import New02 from "../../../../images/womenArraival02.webp";
+import New03 from "../../../../images/womenArraival03.webp";
 const AllWomenPopular = () => {
   const products = [
     {

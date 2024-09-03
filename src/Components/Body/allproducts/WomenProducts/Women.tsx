@@ -1,13 +1,12 @@
-
-import AllWomenPopular from './AllWomenPopular'
-import AllWomenArrivals from './AllWoArrival'
+import AllWomenPopular from "./AllWomenPopular";
+import AllWomenArrivals from "./AllWoArrival";
 const Women = () => {
   return (
     <>
-    <AllWomenPopular />
-    <AllWomenArrivals />
+      <AllWomenPopular />
+      <AllWomenArrivals />
     </>
-  )
-}
+  );
+};
 
-export default Women
+export default Women;

@@ -1,15 +1,14 @@
-import Slider from './Display'
+import Slider from "./Display";
 
-import FrontPage from './FrontPage'
+import FrontPage from "./FrontPage";
 
 const Head = () => {
   return (
     <>
-    
-    <Slider />
-    <FrontPage />
+      <Slider />
+      <FrontPage />
     </>
-  )
-}
+  );
+};
 
-export default Head
+export default Head;

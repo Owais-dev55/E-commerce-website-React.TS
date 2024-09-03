@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Form from "./Form"; // Adjust path according to your structure
+import Form from "./Form"; 
 
 const Navbar = () => {
   return (
