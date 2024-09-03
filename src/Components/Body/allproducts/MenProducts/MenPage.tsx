@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./MenPage.css";
 
 const MenPage = () => {
@@ -12,9 +13,9 @@ const MenPage = () => {
             <h1 className="Find">
               Uncover the latest <b>VOGUEAURA</b> insights
             </h1>
-            <a href="/Men" className="btn btn-lg btn-outline-success ">
+            <Link to="/men" className="btn btn-lg btn-outline-success ">
               Find For Him
-            </a>
+            </Link>
           </div>
           <div className="col-md-8">
             <div className="collage-grid">

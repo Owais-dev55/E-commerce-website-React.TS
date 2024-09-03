@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./FrontPage.css";
 
 const FrontPage = () => {
@@ -10,9 +11,9 @@ const FrontPage = () => {
           Today!
         </h1>
         <p className="Pagetext">Unlock Your Dream Deals Today!</p>
-        <a className="btn btn-primary shop-btn" href="/Women">
+        <Link className="btn btn-primary shop-btn" to="/women">
           Shop Now
-        </a>
+        </Link>
       </div>
     </>
   );
