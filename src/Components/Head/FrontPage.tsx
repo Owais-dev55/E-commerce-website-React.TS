@@ -10,7 +10,6 @@ const FrontPage = () => {
           <span> Dream Deals </span>
           Today!
         </h1>
-        <p className="Pagetext">Unlock Your Dream Deals Today!</p>
         <Link className="btn btn-primary shop-btn" to="/women">
           Shop Now
         </Link>

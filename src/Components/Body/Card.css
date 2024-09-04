@@ -6,6 +6,7 @@
 .heading {
   text-align: center;
   font-size: 2.5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
   color: #4a4a4a;
@@ -28,7 +29,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 0.7rem;
 }
 
 .card {
@@ -39,22 +40,37 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 18rem;
+  margin-left: 2rem;
   position: relative;
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0;
+  animation-range: entry 0 cover 25%;
 }
-
 @keyframes appear {
   from {
-    transform: translateX(-100px);
+    transform: scale(0.5);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
+
+.img-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+
+}
+
 .card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -71,6 +87,8 @@
   padding: 1.5rem;
   text-align: center;
   background-color: #ffffff;
+  width: 300px;
+  height: 400px;
 }
 
 .card-title {
@@ -146,3 +164,4 @@
     margin-bottom: 1.5rem;
   }
 }
+

@@ -11,9 +11,9 @@ const MenPage = () => {
         <div className="row">
           <div className="col-md-4 align-self-center">
             <h1 className="Find">
-              Uncover the latest <b>VOGUEAURA</b> insights
+              Uncover the latest <b>VOGUEAURA</b> Insights
             </h1>
-            <Link to="/men" className="btn btn-lg btn-outline-success ">
+            <Link to="/men" className="btn btn-lg btn-outline-success button">
               Find For Him
             </Link>
           </div>
