@@ -65,18 +65,22 @@
   font-size: 1.4rem;
 }
 
-.footer {
+.footer-about {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
+  background-color: #333;
+  height: 100px;
   color: #777;
   text-align: center;
   margin-top: 2rem;
 }
 
-.footer:last-child {
+.footer-about:last-child {
   margin-bottom: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about-container {
     padding: 1rem;
@@ -116,7 +120,7 @@
     font-size: 1rem;
   }
 
-  .footer {
+  .footer-about {
     font-size: 1rem;
   }
 }

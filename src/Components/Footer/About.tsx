@@ -27,8 +27,8 @@ const About = () => {
       <p className="description">
         Contact us with any questions or concerns. We're always here to help.
       </p>
-      <p className="footer">Thank you for shopping with VogueAura!</p>
-      <p className="footer">Best regards, The VogueAura Team</p>
+      <p className="footer-about">Thank you for shopping with VogueAura!</p>
+      <p className="footer-about">Best regards, The VogueAura Team</p>
     </div>
   );
 };
