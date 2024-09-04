@@ -1,8 +1,122 @@
 .about-container {
-  text-align: justify;
-  margin-left: 1.5rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 80%;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-p {
-  font-size: 1.5rem;
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.benefits {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.benefits li {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.benefits li::before {
+  content: "✓";
+  color: lime;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.4rem;
+}
+
+.footer {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .subheading {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .benefits li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .benefits li {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
 }
