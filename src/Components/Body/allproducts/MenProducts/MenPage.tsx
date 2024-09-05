@@ -13,7 +13,7 @@ const MenPage = () => {
             <h1 className="Find">
               Uncover the latest <b>VOGUEAURA</b> Insights
             </h1>
-            <Link to="/men" className="btn btn-lg btn-outline-success button">
+            <Link to="/men" className="btn btn-lg btn-outline-success men-button">
               Find For Him
             </Link>
           </div>

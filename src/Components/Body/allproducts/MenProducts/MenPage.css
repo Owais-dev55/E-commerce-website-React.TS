@@ -72,8 +72,12 @@
 }
 
 .Find,
-.button {
+.men-button {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 3rem;
   margin-bottom: 3rem;
+}
+
+.men-button {
+  border: 2px solid green;
 }
