@@ -1,0 +1,23 @@
+.d-flex {
+  margin-right: 1rem;
+  width: 340px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-outline-success {
+  border: none;
+  border-radius: 30px;
+  background-color: transparent;
+  position: absolute;
+  margin-right: 0.59rem;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.form-control {
+  border-radius: 7rem;
+}

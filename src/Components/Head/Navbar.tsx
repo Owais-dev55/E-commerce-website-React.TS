@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Form from "./Form"; 
+import Form from "./Form";
 
 const Navbar = () => {
   return (
@@ -24,22 +24,16 @@ const Navbar = () => {
               <Link className="nav-link active " to="/">
                 Home
               </Link>
-              <Link className="nav-link" to="/about-us">
-                About Us
-              </Link>
-              <Link className="nav-link" to="/contact-us">
-                Contact Us
-              </Link>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Products
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                   <li>
                     <Link className="dropdown-item" to="/men">
@@ -56,15 +50,22 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              <Link className="nav-link" to="/about-us">
+                About Us
+              </Link>
+              <Link className="nav-link" to="/contact-us">
+                Contact Us
+              </Link>
               <Link className="nav-link disabled " to="">
                 Coupons
               </Link>
-              <Link className="nav-link" to="/SignIn">
+              <Link className="nav-link login" to="/SignIn">
                 LogIn
               </Link>
             </div>
           </div>
         </div>
+        
         <Form />
       </nav>
     </>

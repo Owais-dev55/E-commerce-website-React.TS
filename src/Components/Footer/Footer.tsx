@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div className="col-md-4">
               <div className="social">
-                <h3>Get in Touch</h3>
+                <h2>Get in Touch</h2>
                 <Link to="#" target="_blank">
                   <i className="fa-brands fa-instagram" aria-hidden="true"></i>
                 </Link>
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Link to="#">
                   <i className="fa-brands fa-square-youtube fs-3"></i>
                 </Link>
-                <h3 className="fs-2">Services</h3>
+                <h2 className="fs-2">Services</h2>
                 <h5 className="fs-5">Design</h5>
                 <h5 className="fs-5">Development</h5>
               </div>
