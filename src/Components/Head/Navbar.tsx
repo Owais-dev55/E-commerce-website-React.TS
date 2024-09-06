@@ -1,75 +1,108 @@
-import { Link } from "react-router-dom";
-import Form from "./Form";
-
-const Navbar = () => {
-  return (
-    <>
-      <nav
-        className="navbar bg-dark navbar-expand-lg sticky-top"
-        data-bs-theme="dark"
-      >
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            VogueAura
-          </Link>
-          <button
-            className="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active " to="/">
-                Home
-              </Link>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+  import { NavLink, Link } from "react-router-dom";
+  import Form from "./Form";
+  import './Navbar.css'
+  const Navbar = () => {
+    return (
+      <>
+        <nav
+          className="navbar bg-dark navbar-expand-lg sticky-top"
+          data-bs-theme="dark"
+        >
+          <div className="container-fluid">
+            <NavLink className="navbar-brand" to="/">
+              VogueAura
+            </NavLink>
+            <button
+              className="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                  to="/"
                 >
-                  Products
+                  Home
+                </NavLink>
+                <li className="nav-item dropdown">
+                  <div
+                    className="nav-link"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Products
+                  </div>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <NavLink
+                        className={({ isActive }) =>
+                          isActive ? "dropdown-item active" : "dropdown-item"
+                        }
+                        to="/men"
+                      >
+                        Men
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          New
+                        </span>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className={({ isActive }) =>
+                          isActive ? "dropdown-item active" : "dropdown-item"
+                        }
+                        to="/women"
+                      >
+                        Women
+                      </NavLink>
+                    </li>
+                  </ul>
+                </li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                  to="/about-us"
+                >
+                  About Us
+                </NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                  to="/contact-us"
+                >
+                  Contact Us
+                </NavLink>
+                <Link className="nav-link disabled" to="/">
+                  Coupons
                 </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/men">
-                      Men
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        New
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/women">
-                      Women
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <Link className="nav-link" to="/about-us">
-                About Us
-              </Link>
-              <Link className="nav-link" to="/contact-us">
-                Contact Us
-              </Link>
-              <Link className="nav-link disabled " to="">
-                Coupons
-              </Link>
-              <Link className="nav-link login" to="/SignIn">
-                LogIn
-              </Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                  to="/SignIn"
+                >
+                  LogIn
+                </NavLink>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <Form />
-      </nav>
-    </>
-  );
-};
+          <Form />
+          <i className="fa-solid fa-cart-shopping">
+          <span className="position-absolute translate-middle badge badge1 rounded-pill bg-danger">
+                          0
+                        </span>
+          </i>
+        </nav>
+      </>
+    );
+  };
 
-export default Navbar;
+  export default Navbar;
