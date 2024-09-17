@@ -1,11 +1,17 @@
+
+.navbar {
+  box-sizing: border-box;
+}
+
 .nav-link {
-    margin-left: 2.5rem;
+    margin-left: 3.5rem;
   }
   
   .nav-link.active {
     color: white; 
     font-weight: bold;
     border-bottom: 2px solid red; 
+    scale: 1.1;
   }
   
   .fa-cart-shopping {
@@ -16,7 +22,9 @@
   }
   
   .badge1 {
-    height: 22px;
-    width: 22px;
+    
+    height: 25px;
+    width: 25px;
     font-size: 13px;
   }
+

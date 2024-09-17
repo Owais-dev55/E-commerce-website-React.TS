@@ -1,0 +1,195 @@
+.checkout {
+  max-width: 90%px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40px;
+  background: #f9f9f9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.col2 {
+  flex: 1;
+  padding: 20px;
+}
+
+.title2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.inputbox {
+  margin-bottom: 20px;
+}
+
+.inputbox label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.inputbox input:focus {
+  border-color: #ff5722;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cards img {
+  width: 70px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.cards img:hover {
+  transform: scale(1.1);
+}
+
+.button2 {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.button2:hover {
+  background-color: #e64a19;
+  box-shadow: 0 8px 20px rgba(255, 170, 0, 0.3);
+}
+
+.checkout h2 {
+  font-family: "Playfair Display", serif;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .checkout {
+    padding: 30px;
+  }
+
+  .title2 {
+    font-size: 1.8rem;
+  }
+
+  .inputbox input {
+    padding: 10px;
+  }
+
+  .cards img {
+    width: 50px;
+  }
+
+  .button2 {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row2 {
+    flex-direction: column;
+  }
+
+  .col2 {
+    min-width: 100%;
+    padding: 10px;
+  }
+
+  .title2 {
+    font-size: 1.6rem;
+  }
+
+  .inputbox label {
+    font-size: 0.9rem;
+  }
+
+  .inputbox input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .cards img {
+    width: 45px;
+  }
+
+  .button2 {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout {
+    padding: 20px;
+  }
+
+  .title2 {
+    font-size: 1.5rem;
+  }
+
+  .inputbox input {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .cards img {
+    width: 35px;
+  }
+
+  .button2 {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .inputbox label {
+    font-size: 0.85rem;
+  }
+}

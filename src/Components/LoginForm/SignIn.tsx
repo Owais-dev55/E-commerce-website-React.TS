@@ -1,82 +1,67 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import "./SignIn.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-type Inputs = {
-  fullName: string;
-  password: string;
-};
+
 const SignIn = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) =>
-    alert(` fullName : ${data.fullName} \n We will reach out you soon`);
+  const onSubmit = () => {
+    alert(`We will reach out you soon`);
+
+  }
 
   return (
     <>
-      <div className="container-fuild signin">
-        <div className="wrapper">
-          <h1 className="heading"> WelCome to Vogue Aura</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <h1>login</h1>
-            <div className="input-box">
-              <label htmlFor="fullName">
-                fullName:
-                <input
-                  required
-                  type="text"
-                  autoComplete="name"
-                  placeholder="fullName"
-                  {...register("fullName", {
-                    required: { value: true, message: "Field is required" },
-                    minLength: { value: 3, message: "Min length is 3" },
-                    maxLength: { value: 8, message: "Max length is 8" },
-                  })}
-                  id="fullName"
-                ></input>
-              </label>
-              {errors.fullName && (
-                <div style={{ color: "red" }}>{errors.fullName.message}</div>
-              )}
-            </div>
-            <div className="input-box">
-              <label htmlFor="password">
-                Password :
-                <input
-                  required
-                  type="password"
-                  autoComplete="password"
-                  placeholder="Enter your password"
-                  {...register("password", {
-                    required: { value: true, message: "Field is required" },
-                    minLength: { value: 3, message: "Min length is 3" },
-                    maxLength: { value: 8, message: "Max length is 8" },
-                  })}
-                  id="password"
-                ></input>
-                {errors.password && (
-                  <div style={{ color: "red" }}>{errors.password.message}</div>
-                )}
-              </label>
-            </div>
-            <div className="forget">
-              <Link to="/">Forget password ?</Link>
-            </div>
-            <button className="btn" type="submit">
-              Submit
-            </button>
-            <div className="register-link">
-              <p>
-                Dont have an account <br />
-                <Link to="/SignUp">Register ?</Link>
-              </p>
-            </div>
-          </form>
+    <div className="body">
+      <div className="login-container">
+        <h2 className="form-title">Login With</h2>
+        <div className="social-icons">
+          <button className="social-button">
+            <i className="fa-brands fa-google">GOOGLE</i>
+          </button>
+          <button className="social-button">
+            <i className="fa-brands fa-apple">APPLE</i>
+          </button>
         </div>
-      </div>
+        <div className="seprator">
+          <span>or</span>
+        </div>
+        <form onSubmit={onSubmit} className="login-form">
+          <div className="input-wrapper">
+            <label className="input-label">Email</label>
+            <input
+              type="email"
+              className="input-field"
+              placeholder="Enter your Email"
+              required
+            />
+            <span>
+              <i className="fa-solid fa-envelope"></i>
+            </span>
+          </div>
+          <div className="input-wrapper">
+            <label className="input-label">Password</label>
+            <input
+              type="password"
+              className="input-field"
+              placeholder="Enter your Password"
+              required
+            />
+            <span>
+              <i className="fa-solid fa-lock"></i>
+            </span>
+          </div>
+          <a href="#" className="forget-password">
+            Forgot your password ?
+          </a>
+          <button>Log In</button>
+        </form>
+
+        <p>
+          Don't have an account ? <a href="/SignUp">SignUp</a>
+        </p>
+
+        </div>
+        </div>
     </>
   );
 };
