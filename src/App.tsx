@@ -38,6 +38,4 @@ const [cartItems , setCartItems] = useState<Products[]>([])
   );
 }
 
-
-
 export default App;
