@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./SignIn.css";
 
 const SignIn = () => {
@@ -53,7 +54,7 @@ const SignIn = () => {
           </form>
 
           <p>
-            Don't have an account ? <a href="/SignUp">SignUp</a>
+            Don't have an account ? <NavLink to="/SignUp">SignUp</NavLink>
           </p>
         </div>
       </div>
