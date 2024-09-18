@@ -2,17 +2,22 @@ import { useContext } from "react";
 import "./Card.css";
 import { cart } from "../../utilities/Context";
 import { Products } from "../../utilities/Types";
-import {v4 as uuidv4} from 'uuid'
 
 export const Card = ({ id, title, description, price, url }: Products) => {
   const { setCount, count, cartItems, setCartItems } = useContext(cart);
-
   const addItemToCart = (item: Products) => {
-    const newItem = { ...item, id: uuidv4(), quantity: 1 };
-    setCartItems([...cartItems, newItem]);
+    const newItem = { ...item, quantity: 1 };
+    const existingItem = cartItems.find(
+      (cartItem) => cartItem.id === newItem.id
+    );
+    if (existingItem) {
+      existingItem.quantity! += 1;
+    } else {
+      setCartItems([...cartItems, newItem]);
+    }
     setCount(count + 1);
   };
-  
+
   return (
     <div className="popular-in-women">
       <div className="card">
@@ -28,7 +33,14 @@ export const Card = ({ id, title, description, price, url }: Products) => {
           </ul>
           <button
             onClick={() => {
-              addItemToCart({ id, title, description, price, url,quantity:1 });
+              addItemToCart({
+                id,
+                title,
+                description,
+                price,
+                url,
+                quantity: 1,
+              });
             }}
             className="btn btn-primary"
           >

@@ -6,4 +6,5 @@
 
 body  , html{
   background-color: #e5e7eb;
+  overflow: auto;
 }

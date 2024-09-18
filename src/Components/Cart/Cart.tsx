@@ -8,12 +8,12 @@ const Cart = () => {
 
   const calculateTotalAmount = () => {
     return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
+      (total, item) => total + item.price * item.quantity!,
       0
     );
   };
 
-  const handleRemoveItem = (itemId: string) => {
+  const handleRemoveItem = (itemId: number) => {
     const updatedCartItems = cartItems.filter(
       (cartItem) => cartItem.id !== itemId
     );
@@ -21,7 +21,7 @@ const Cart = () => {
     updateCartCount(updatedCartItems);
   };
 
-  const handleUpdateQuantity = (itemId: string, newQuantity: number) => {
+  const handleUpdateQuantity = (itemId: number, newQuantity: number) => {
     if (newQuantity <= 0) {
       handleRemoveItem(itemId);
       return;
@@ -34,7 +34,7 @@ const Cart = () => {
   };
 
   const updateCartCount = (items: typeof cartItems) => {
-    const newCount = items.reduce((total, item) => total + item.quantity, 0);
+    const newCount = items.reduce((total, item) => total + item.quantity!, 0);
     setCount(newCount);
   };
 
@@ -58,18 +58,18 @@ const Cart = () => {
           <p>${item.price}</p>
           <div className="quantity-controls">
             <button
-              onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
+              onClick={() => handleUpdateQuantity(item.id, item.quantity! - 1)}
             >
               -
             </button>
             <p className="quan">{item.quantity}</p>
             <button
-              onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)}
+              onClick={() => handleUpdateQuantity(item.id, item.quantity! + 1)}
             >
               +
             </button>
           </div>
-          <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+          <p>Total: ${(item.price * item.quantity!).toFixed(2)}</p>
           <i
             className="fa-solid fa-trash"
             onClick={() => handleRemoveItem(item.id)}

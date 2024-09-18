@@ -16,6 +16,7 @@ const MenUrbanAll = () => {
               description={product.description}
               price={product.price}
               url={product.url}
+              id={product.id}
             />
           </div>
         ))}

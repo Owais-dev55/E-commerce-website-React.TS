@@ -15,7 +15,7 @@ const AllWomenPopular = () => {
               description={product.description}
               price={product.price}
               url={product.url}
-              
+              id={product.id}
             />
           </div>
         ))}
