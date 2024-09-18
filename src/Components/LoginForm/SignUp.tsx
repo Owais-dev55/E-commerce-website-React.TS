@@ -13,7 +13,7 @@ const SignUp = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) =>
     alert(`Welcome ${data.fullName}! Your account has been created.`);
